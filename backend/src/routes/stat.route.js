@@ -1,9 +1,8 @@
 import { Router } from "express";
+import { getStat } from "../controller/stat.controller.js"
 
 const router = Router();
 
-router.get("/", (req, res) => {
-    res.send("Stats route with GET method");
-});
+router.get("/", getStat);
 
 export default router;
